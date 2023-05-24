@@ -19,12 +19,13 @@ body {
   background-color: var(--bg-color);
 }
 .container {
+  display: flex;
   width: 100%;
   padding: 20px;
   min-height: 100vh;
 }
 .sidebar {
-  width: 250px;
+  min-width: 250px;
   height: 100%;
   border-radius: 30px;
   padding: 30px 20px;
@@ -110,4 +111,46 @@ body {
 }
 .sidebar .menu:first-child {
   flex: 1;
+}
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 20px;
+  }
+  .sidebar .user {
+    display: none;
+  }
+  .sidebar .hr {
+    display: none;
+  }
+  .sidebar .menu.one:last-child {
+    display: none;
+  }
+  .sidebar .menu.two {
+    display: none;
+  }
+  .sidebar .menu {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .sidebar .menu li a span {
+    display: none;
+  }
+  .sidebar .menu li a ion-icon {
+    font-size: 20px;
+  }
 }
