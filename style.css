@@ -26,9 +26,10 @@ body {
 }
 .sidebar {
   min-width: 250px;
-  height: 100%;
   border-radius: 30px;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-color-light);
 }
 .user {
@@ -109,7 +110,7 @@ body {
   color: var(--text-color-light);
   background-color: var(--primary-color);
 }
-.sidebar .menu:first-child {
+.sidebar .menu.one {
   flex: 1;
 }
 main {
@@ -126,6 +127,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: row;
     align-items: center;
     width: 95%;
     height: 20px;
